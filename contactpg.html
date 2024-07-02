@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/HTML/wknd.assign/style.css">
+</head>
+<body>
+    <hr />
+    
+    <header>
+      <img class="logo" src="/HTML/wknd.assign/squibix.jpg" alt="logo" width="70px" height="70px"></img>
+      
+      <p class="link">SQUIBIX INTERN</p>
+
+    <nav>
+        <a class="" href="/HTML/wknd.assign/homepg.html" onClick="activeHome()" id="home">HOME</a></li>
+        <a class="active" href="/HTML/wknd.assign/contactpg.html" onClick="activecontact()" id="contact">CONTACT</a>
+
+    </nav>
+    </header><br><br><br><br><br><br><br>
+    <hr/>
+
+
+
+    <div class="content">
+        <h1 style="text-align: center; background-color: hsl(55, 61%, 57%);"><u>Contact Info:-</u></h1><br>
+        <h3 style="font-family: 'Poppins', papyrus;  ">Thank you for visiting my website! Whether you have questions, feedback, or business inquiries, I’m here to assist. Feel free to reach out using the form below, and I’ll respond promptly. Your privacy matters, and any information you share will remain confidential. Let’s connect and build meaningful interactions!<br />
+            🌟 Grateful for Your Visit! Let’s Connect 💌
+        </h3><br>
+            <hr/>
+            <h1 style="text-align: center; background-color: hsl(175, 76%, 62%);">FORM:-</h1>
+            <hr/><br>
+
+
+        <form style="text-align: center;"  action = "javascript:submitForm()" onSubmit = "return validate()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Eg: John Doe" required><br><br>
+
+            <label for="dob" style="color: black">Enter Date Of Birth:</label>
+      <input type="date" name="dob" id="dob" min="2023-01-01" max="2025-01-01" required><br><br>
+
+            <label for = "phoneNo">Enter Phone Number: </label>
+      <input type = "number" name = "phoneNo" id = "phoneNo" placeholder = "Eg: 70766XXXXX" pattern = "[0-9]{10}" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Eg: john@gmail.com" required><br><br>
+
+            <label for="scientist">Choose Your Favorite ISRO scientist:</label>
+            <input list="scientists" name="scientist" id="scientist" required>
+              <datalist id="scientists">
+                <option value="APJ Abdul Kalam">
+                <option value="Vikram sarabhai">
+                <option value="Homi J.Bhabha">
+                <option value="Nambi narayan">
+              </datalist><br><br>
+
+            <label for="newsletter">Subscribe to My Website:</label>
+            <input type="checkbox" id="website" name="website" required><br><br>
+
+            <input style="font-size:20px;" type="submit" value="Submit">
+        </form>
+        <br>
+
+        <script>
+            function validate() {
+              let validated=true;
+              let ele1 = document.getElementById("name");
+              let ele2 = document.getElementById("phoneNo");
+      
+              if(ele1.value.length < 10) {
+                window.alert("Nickname length must be greater than 2 characters");
+                validated = false;
+              }
+              else if(ele2.value.length !== 10)
+              {
+                  window.alert("phone No. length must be 10 digits");
+                validated = false;
+              }
+              
+                  
+                return validated;
+            }
+
+            
+            function submitForm() {
+              window.alert("Form Submitted")
+            }
+          </script>
+
+</div>
+<br>
+    <footer>
+        <ul>
+        <li>Author: Swagat nayak</li>
+        <li>Phone NO: 6371733145</li>
+        <li><a style="color:white;" href="mailto:swagatnayak45@gmail.com">swagatnayak45@gmail.com</a></li>
+      </ul>
+    </footer> 
+</body>
+</html>
